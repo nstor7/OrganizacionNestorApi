@@ -1,0 +1,62 @@
+[
+  {
+    "userId": "user_01",
+    "type": "appointment",
+    "title": "Cita con el Dentista",
+    "status": "todo",
+    "start": "2024-05-20T10:00:00Z",
+    "end": "2024-05-20T11:00:00Z",
+    "location": "Clínica Dental Central"
+  },
+  {
+    "userId": "user_01",
+    "type": "todo",
+    "title": "Comprar pan",
+    "status": "todo",
+    "urgency": "pending",
+    "date": "2024-05-20T08:00:00Z",
+    "isBirthday": false
+  },
+  {
+    "userId": "user_01",
+    "type": "todo",
+    "title": "Cumpleaños de María",
+    "status": "todo",
+    "urgency": "pending",
+    "date": "2024-05-21T00:00:00Z",
+    "isBirthday": true,
+    "notifications": {
+      "enabled": true,
+      "morning": true,
+      "evening": true
+    }
+  },
+  {
+    "userId": "user_01",
+    "type": "todo",
+    "title": "Aprender a tocar la gaita",
+    "status": "backlog",
+    "urgency": "idea"
+  },
+  {
+    "userId": "user_01",
+    "type": "recurrent",
+    "title": "Clase de Programación",
+    "status": "todo",
+    "slots": [
+      { "day": "lunes", "startTime": "18:00", "endTime": "20:00" },
+      { "day": "miercoles", "startTime": "18:00", "endTime": "20:00" }
+    ]
+  },
+  {
+    "userId": "user_01",
+    "type": "task",
+    "title": "Diseñar Base de Datos",
+    "projectId": "proj_web_001",
+    "status": "in_progress",
+    "deadline": "2024-05-25T23:59:59Z",
+    "workSessions": [
+      { "start": "2024-05-20T14:00:00Z", "end": "2024-05-20T16:00:00Z" }
+    ]
+  }
+]

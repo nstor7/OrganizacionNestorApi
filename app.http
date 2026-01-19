@@ -1,0 +1,95 @@
+###
+GET http://localhost:1234/projects
+
+###
+POST http://localhost:1234/tareas
+content-type: application/json
+  
+{
+  "title": "Hacer Factura para Toque de Elliet", 
+  "type": "todo", 
+  "urgency": "today"
+}
+
+###
+POST http://localhost:1234/tareas
+content-type: application/json
+
+{
+  "title": "locura", 
+  "type": "task", 
+  "projectId": "695c0b3f91f4fcb3581fe6ec",
+  "status": "done"
+}
+
+
+
+###
+POST http://localhost:1234/tareas
+content-type: application/json
+
+{
+  "title": "Toque con Charri", 
+  "type": "appointment", 
+  "start": "2026-01-10T15:00Z",
+  "end": "2026-01-10T16:00Z",
+  "location": "Hotel en el Valle"
+}
+
+###
+POST http://localhost:1234/tareas
+content-type: application/json
+
+{
+  "title": "Ensayo Sinfónica", 
+  "type": "recurrent", 
+  "slots":[
+    {
+      "day": "lunes",
+      "startTime": "07:30",
+      "endTime": "10;30"
+    },
+        {
+      "day": "martes",
+      "startTime": "07:30",
+      "endTime": "10;30"
+    },
+        {
+      "day": "miercoles",
+      "startTime": "07:30",
+      "endTime": "10;30"
+    },
+        {
+      "day": "jueves",
+      "startTime": "07:30",
+      "endTime": "10;30"
+    },
+        {
+      "day": "viernes",
+      "startTime": "07:30",
+      "endTime": "10;30"
+    }
+  ]
+}
+
+###
+PATCH http://localhost:1234/tareas/695b5d0d04de833f1e261986
+Content-Type: application/json
+
+{
+  "title": "Hacer buenos títulos para el video de como hacer una campaña"
+} 
+
+###
+POST http://localhost:1234/tareas
+content-type: application/json
+
+{
+  "title": "locura", 
+  "type": "todo", 
+  "projectId": "695c0b3f91f4fcb3581fe6ec",
+  "status": "done"
+}
+
+###
+GET http://localhost:1234/tareas/day?date=2026-01-10

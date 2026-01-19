@@ -1,0 +1,26 @@
+{
+  "name": "organizacion-api",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "license": "ISC",
+  "author": "Nestor Ibarra",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "5.2.1",
+    "mongodb": "7.0.0",
+    "zod": "4.3.4"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
