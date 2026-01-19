@@ -6,7 +6,7 @@ const ACCEPTED_ORIGINS = [
   'http://localhost:5173',
   'http://192.168.0.2:5173',
   'http://organizacion-nestor-api.vercel.app/*',
-  'https://organizacion-nestor.vercel.app/*'
+  'https://organizacion-nestor.vercel.app/*', 
 ]
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
@@ -20,5 +20,8 @@ export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => c
     }
 
     return callback(new Error('Not allowed by CORS'))
-  }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
+  credentials: true // Útil si en el futuro usas cookies o sesiones
 })
