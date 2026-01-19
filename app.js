@@ -11,7 +11,9 @@ export const createApp = ({ tareaModel, projectModel })=>{
     app.use(json())
     app.use(corsMiddleware())
     app.disable('x-powered-by')
-
+    app.get('/', (req, res)=>{
+        res.send('el servidor funciona correctamente')
+    })
     app.use('/tareas', createTareaRouter({ tareaModel }))
 
     app.use('/projects', createProjectRouter({ projectModel }))
