@@ -5,8 +5,8 @@ const ACCEPTED_ORIGINS = [
   'http://localhost:1234',
   'http://localhost:5173',
   'http://192.168.0.2:5173',
-  'http://organizacion-nestor-api.vercel.app',
-  'https://organizacion-nestor.vercel.app'
+  'http://organizacion-nestor-api.vercel.app/*',
+  'https://organizacion-nestor.vercel.app/*'
 ]
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
