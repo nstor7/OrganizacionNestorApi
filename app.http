@@ -2,13 +2,34 @@
 GET http://localhost:1234/projects
 
 ###
+POST  http://localhost:1234/projects
+Content-Type: application/json
+
+{
+ "name": "Aplicación de Organización",
+ "color": "#e1e1e1",
+ "userId": "usuario_1"
+}
+
+###
 POST http://localhost:1234/tareas
 content-type: application/json
   
 {
-  "title": "Hacer Factura para Toque de Elliet", 
+  "title": "Comprar Lija para el Drill", 
   "type": "todo", 
-  "urgency": "today"
+  "urgency": "pending"
+}
+
+###
+GET http://localhost:1234/tareas/todo?urgency=today
+
+###
+PATCH http://localhost:1234/tareas/69617c859c8ff3cd139e612b
+Content-Type: application/json
+
+{
+  "urgency": "done"
 }
 
 ###
@@ -16,10 +37,16 @@ POST http://localhost:1234/tareas
 content-type: application/json
 
 {
-  "title": "locura", 
+  "title": "Vista de Día", 
   "type": "task", 
-  "projectId": "695c0b3f91f4fcb3581fe6ec",
-  "status": "done"
+  "projectId": "69654d389c8ff3cd139e6130",
+  "status": "in_progress",
+  "workSessions": [
+    {
+      "start": "2026-01-12T12:30Z",
+      "end": "2026-01-12T15:00Z"
+    }
+  ]
 }
 
 
@@ -29,11 +56,11 @@ POST http://localhost:1234/tareas
 content-type: application/json
 
 {
-  "title": "Toque con Charri", 
+  "title": "Concierto Forasteros", 
   "type": "appointment", 
-  "start": "2026-01-10T15:00Z",
-  "end": "2026-01-10T16:00Z",
-  "location": "Hotel en el Valle"
+  "start": "2026-01-18T17:00Z",
+  "end": "2026-01-18T22:00Z",
+  "location": "American Trade"
 }
 
 ###
@@ -92,4 +119,4 @@ content-type: application/json
 }
 
 ###
-GET http://localhost:1234/tareas/day?date=2026-01-10
+GET http://localhost:1234/tareas/day?date=2026-01-12
